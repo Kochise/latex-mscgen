@@ -24,7 +24,7 @@ Alternatively, you can use https://github.com/Kochise/win_portable
 
 ## usage
 
-See https://github.com/mscgen-js/mscgen-cli<br>
+See http://msc-generator.sourceforge.net/help/<br>
 
 In your preamble :
 
