@@ -143,7 +143,7 @@ What is available through 'mscgen.exe' (which is a lot) :
 -l
 
 % Display program help and exit
--h , --help
+-h, --help
 
 % Display version information and exit
 --version
@@ -175,9 +175,17 @@ Just add the requested parameters without the leading dash(es).<br>
 Avoid :
 
 ```
-i	: because used by the provided text
-o	: because using the refname
-T	: because set to 'eps' (vector) as default
+i		: because used by the provided text
+o		: because using the refname
+T		: because set to 'eps' (vector) as default
+utf8	: because cannot use numbers
+utf16	: because cannot use numbers
+```
+
+For UTF specification, use the following format :
+
+```latex
+\usepackage[utf={8}]{mscgen}
 ```
 
 ## limitations
@@ -188,5 +196,5 @@ Your imagination.
 
 Based on https://github.com/dakusui/latex-ditaa<br>
 Based also upon https://github.com/unjello/msctexen<br>
-Help from the community https://tex.stackexchange.com/questions/570758/verbatimout-newenvironment-and-removing-characters/
+Help from the community https://tex.stackexchange.com/questions/570758/verbatimout-newenvironment-and-removing-characters/<br>
 Also interested into https://github.com/sile-typesetter/sile<br>
