@@ -39,6 +39,7 @@ In your document :
 ```latex
 % http://msc-generator.sourceforge.net/help/5.4/Text-Formatting.html
 %\begin{mscgen}[width]{caption}{refname}
+\begin{mscgen}[8cm]{mscgen caption example}{mscgenexample}
 msc {
   hscale = "2";
 
@@ -71,19 +72,19 @@ What is available through 'mscgen.exe' (which is a lot) :
 --tei-mode
 
 % Output file type (default is 'png')
--T [png/eps/pdf/svg/ismap/lmap/csh/emf]
+-T [png|eps|pdf|svg|ismap|lmap|csh|emf]
 
 % Embed the chart text into 'png' file as an iTXt chunk (uncompressed)
 -e
 
 % Output file (png, eps, pdf, svg, emf)
--o outfile
+-o <outfile>
 
 % Input file
--i infile
+-i <infile>
 
 % Forces the input file to be interpreted as as a specific type of chart
--S <signalling/graph>
+-S [signalling|graph]
 
 % Forces the input file to be interpreted as UTF-16, even if it looks like UTF-8 or ASCII
 --utf16
@@ -92,40 +93,40 @@ What is available through 'mscgen.exe' (which is a lot) :
 --utf8
 
 % Full-page output ('p' or an 'l' for portrait and landscape)
--p=[A0-A6/letter/legal/ledger/tabloid][l/p]
+-p=[A0-A6|letter|legal|ledger|tabloid][l|p]
 
 % Specifies the margin in full-page output (in inches -number only- or in centimeters -appended with 'cm')
--m{lrud}=‘margin'
+-m{lrud}=<margin>
 
 % Set the vertical alignment within a page for full-page output
--va=[center/up/down]
+-va=[center|up|down]
 
 % Set the horizontal alignment within a page for full-page output
--ha=[center/left/right]
+-ha=[center|left|right]
 
 % Automatic pagination
 -a[h]
 
 % Width (in pixels)
--x=width
+-x=<width>
 
 % Height (in pixels)
--y=height
+-y=<height>
 
 % Scale chart size up or down
--s=scale
+-s=<scale>
 
 % Use specified font (must be available in the local system)
--F font
+-F <font>
 
 % Load additional chart design definitions
--D design_file
+-D <design_file>
 
 % Don't load design files
 --nodesigns
 
 % Chart option
---chart_option=value
+--chart_option=<value>
 
 % Chart's design pattern
 --chart_design
@@ -166,7 +167,7 @@ Options specific to Signalling Charts:
 ```
 
 Cannot be specified on a group basis, only in the preamble.<br>
-Just add the requested parameters without the leading dash(es).<br>
+Just add the requested parameters without the leading/separator dash/underscor(es).<br>
 
 ```latex
 \usepackage[ha={center}]{mscgen}
@@ -175,11 +176,11 @@ Just add the requested parameters without the leading dash(es).<br>
 Avoid :
 
 ```
-i		: because used by the provided text
-o		: because using the refname
-T		: because set to 'eps' (vector) as default
-utf8	: because cannot use numbers
-utf16	: because cannot use numbers
+i	: because used by the provided text
+o	: because using the refname
+T	: because set to 'eps' (vector) as default
+utf8	: because cannot use numbers, alternative below
+utf16	: because cannot use numbers, alternative below
 ```
 
 For UTF specification, use the following format :
